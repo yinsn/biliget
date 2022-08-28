@@ -4,7 +4,7 @@ from typing import Optional
 
 
 class DownLoader:
-    def __init__(self, save_path: Optional[str]) -> None:
+    def __init__(self, save_path: Optional[str] = None) -> None:
         self.save_path = save_path
         self._check_path()
 
