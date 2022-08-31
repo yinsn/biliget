@@ -7,7 +7,7 @@ Bulk downloader for Bilibili.
 ```python
 import biliget
 loader = biliget.DownLoader({SINGLE_URL})
-loader = biliget.load_single()
+biliget.load_single()
 ```
 
 ## Bulk download a series of videos
