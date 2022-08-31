@@ -23,12 +23,14 @@ class DownLoader:
         if not Path(self.save_path).exists():
             os.makedirs(self.save_path)
 
-    def load_single(self, download_link: str) -> None:
+    def load_single(self, download_link: str = None) -> None:
         """Download the video from a given link.
 
         Args:
             download_link (str): Target link for video.
         """
+        if not download_link:
+            download_link = self.base_link
         os.system(f"you-get -o {self.save_path} {download_link}")
 
     def load_multiple(self, start: int, end: int) -> None:
