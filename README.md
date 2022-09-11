@@ -2,7 +2,7 @@
 
 Bulk downloader for Bilibili.
 
-## Download a single bilibili video
+## Download a single Bilibili video
 
 ```python
 import biliget

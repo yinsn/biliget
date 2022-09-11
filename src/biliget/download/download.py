@@ -1,9 +1,6 @@
 import os
 from pathlib import Path
 from typing import List, Optional
-from unicodedata import name
-
-from typing_extensions import Self
 
 
 class DownLoader:
