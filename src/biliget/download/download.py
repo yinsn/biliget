@@ -39,7 +39,7 @@ class DownLoader:
         """
         indices: List[int] = list(range(start, end + 1))
         for index in indices:
-            download_link = f"{self.base_link}{index}"
+            download_link = f"{self.base_link}?p={index}"
             self.load_single(download_link)
 
     def force_download(self) -> None:
