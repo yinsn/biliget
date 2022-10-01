@@ -81,6 +81,7 @@ class DownLoader:
 
     def rename_file(self) -> None:
         """Rename the file for better readability."""
+        os.system(f"rm {self.save_path}/.DS_Store")
         for item in os.listdir(self.save_path):
             if not item.startswith("P"):
                 order, title = item.split("(", 1)[1].split(".", 1)
@@ -90,6 +91,7 @@ class DownLoader:
                 extension = new_name.split(".")[-1]
                 name_head = "_".join(new_name.split(".")[:-1])
                 new_name = name_head + "." + extension
+                new_name = new_name.replace(")", "")
                 os.system(f"mv {self.save_path}/{old_name} {self.save_path}/{new_name}")
 
     def bulk_download(self, start: int, end: int) -> None:
