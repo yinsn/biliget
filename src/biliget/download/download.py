@@ -91,7 +91,7 @@ class DownLoader:
                 extension = new_name.split(".")[-1]
                 name_head = "_".join(new_name.split(".")[:-1])
                 new_name = name_head + "." + extension
-                new_name = new_name.replace(")", "")
+                new_name = new_name.replace(")", "").replace(" ", "").replace("-", "")
                 os.system(f"mv {self.save_path}/{old_name} {self.save_path}/{new_name}")
 
     def bulk_download(self, start: int, end: int) -> None:
